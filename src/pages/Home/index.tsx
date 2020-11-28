@@ -1,33 +1,17 @@
 import React from 'react';
 
-import {
-  Menu,
-  Container,
-  Banner,
-  ListProducts,
-  Product,
-  Logo,
-  Footer,
-} from './styles';
+import Layout from '../../components/Layout';
+
+import { Container, Banner, ListProducts, Product } from './styles';
 
 import TigelaImg from '../../assets/tigela01.png';
 import CanecaImg from '../../assets/caneca01.png';
 import BannerImg from '../../assets/banner.png';
-import LogoImg from '../../assets/logo.svg';
 
 const Home: React.FC = () => {
   return (
-    <>
+    <Layout>
       <Container>
-        <Logo>
-          <img src={LogoImg} alt="" />
-        </Logo>
-        <Menu>
-          <a href="/">HOME</a>
-          <a href="/">DECOR</a>
-          <a href="/">LOUÇAS</a>
-          <a href="/">LEMBRANÇAS</a>
-        </Menu>
         <Banner>
           <img src={BannerImg} alt="" />
         </Banner>
@@ -84,12 +68,8 @@ const Home: React.FC = () => {
             <a href="/">COMPRAR</a>
           </Product>
         </ListProducts>
-        <Footer>
-          <span>Casa DArt - Artigos artesanais para sua casa! </span>
-          <strong>Desenvolvido por - Luciano Janzkovski - 2020</strong>
-        </Footer>
       </Container>
-    </>
+    </Layout>
   );
 };
 

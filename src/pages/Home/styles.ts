@@ -1,45 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin-top: 20px;
   max-width: 900px;
 `;
 
-export const Logo = styled.div`
-  width: 900px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const Menu = styled.div`
-  width: 900px;
-  height: 40px;
-  background: #ead2ac;
-
-  display: flex;
-  justify-items: center;
-  justify-content: space-around;
-  align-items: center;
-
-  a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 700;
-    color: #000;
-  }
-`;
-
 export const Banner = styled.div`
-  /* background: #2f2f2f; */
   width: 900px;
   max-height: 230px;
 
   img {
-    width: 90%;
+    width: 900px;
     height: auto;
   }
 `;
@@ -48,6 +18,7 @@ export const ListProducts = styled.div`
   width: 900px;
   min-height: 200px;
   background: #f4f4f4;
+  margin-top: 10px;
   padding-top: 10px;
 
   display: flex;
@@ -91,15 +62,4 @@ export const Product = styled.div`
     align-items: center;
     justify-content: center;
   }
-`;
-
-export const Footer = styled.div`
-  width: 900px;
-  height: 50px;
-  padding-top: 20px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
 `;
