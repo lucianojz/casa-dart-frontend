@@ -1,15 +1,20 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import GlobalStyle from './styles/global';
 
-import Home from './pages/Home';
-import Product from './pages/Product';
-import Basket from './pages/Basket';
+import Routes from './routes';
+
+import AppProvider from './hooks';
 
 const App: React.FC = () => {
   return (
     <>
-      <Basket />
+      <BrowserRouter>
+        <AppProvider>
+          <Routes />
+        </AppProvider>
+      </BrowserRouter>
       <GlobalStyle />
     </>
   );
