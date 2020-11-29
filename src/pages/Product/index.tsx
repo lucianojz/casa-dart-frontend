@@ -39,6 +39,7 @@ interface ProductData {
 
 interface ProductBasket {
   product_id: string;
+  description: string;
   amount: number;
   value: number;
   freight_charge: number;
@@ -49,16 +50,20 @@ interface Basket {
 }
 
 const Product: React.FC = () => {
-  const [product, setProduct] = useState<ProductData | null>(null);
+  const [product, setProduct] = useState<ProductData>({} as ProductData);
   const { addToast } = useToast();
 
   const { params } = useRouteMatch<ProductParams>();
 
-  useEffect(() => {
+  const handleLoadProduct = useCallback(() => {
     api.get(`products/${params.id}`).then(response => {
       setProduct(response.data);
     });
   }, [params.id]);
+
+  useEffect(() => {
+    handleLoadProduct();
+  }, [handleLoadProduct]);
 
   const handleAddToBasket = useCallback(() => {
     const basket = localStorage.getItem('@Shop:basket');
@@ -84,11 +89,14 @@ const Product: React.FC = () => {
       return;
     }
 
+    handleLoadProduct();
+
     tempBasket.products.push({
       product_id: params.id,
       amount: 1,
-      value: product?.value,
-      freight_charge: product?.freight_charge,
+      description: product.description,
+      value: product.value,
+      freight_charge: product.freight_charge,
     } as ProductBasket);
 
     addToast({
@@ -98,7 +106,7 @@ const Product: React.FC = () => {
     });
 
     localStorage.setItem('@Shop:basket', JSON.stringify(tempBasket));
-  }, []);
+  }, [handleLoadProduct, product, addToast, params.id]);
 
   return (
     <>
