@@ -6,17 +6,23 @@ import { Search, Container, Content, Logo, Footer, Button } from './styles';
 
 import LogoImg from '../../assets/logo.svg';
 
-const Layout: React.FC = ({ children }) => {
+interface LayoutProps {
+  showSearch?: boolean;
+}
+
+const Layout: React.FC<LayoutProps> = ({ showSearch = true, children }) => {
   return (
     <Container>
       <Logo>
         <img src={LogoImg} alt="" />
       </Logo>
       <Menu />
-      <Search>
-        <input type="text" />
-        <Button>Pesquisar</Button>
-      </Search>
+      {showSearch && (
+        <Search>
+          <input type="text" />
+          <Button>Pesquisar</Button>
+        </Search>
+      )}
 
       <Content>{children}</Content>
       <Footer>

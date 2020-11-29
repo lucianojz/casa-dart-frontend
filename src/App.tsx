@@ -4,11 +4,12 @@ import GlobalStyle from './styles/global';
 
 import Home from './pages/Home';
 import Product from './pages/Product';
+import Basket from './pages/Basket';
 
 const App: React.FC = () => {
   return (
     <>
-      <Product />
+      <Basket />
       <GlobalStyle />
     </>
   );
