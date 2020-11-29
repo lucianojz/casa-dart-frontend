@@ -16,11 +16,25 @@ export const Categories = styled.div`
   justify-items: center;
   justify-content: space-around;
   align-items: center;
+`;
+
+export const MenuItem = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
 
   a {
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 700;
     color: #000;
+  }
+
+  a,
+  strong {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  svg {
+    margin-right: 5px;
   }
 `;
