@@ -20,15 +20,15 @@ export const ProductBody = styled.div`
   border-radius: 5px;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const ProductDetail = styled.div`
-  height: 300px;
-
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 
   padding: 15px;
 
@@ -38,12 +38,23 @@ export const ProductDetail = styled.div`
   }
 `;
 
-export const ProductBuy = styled.div`
-  /* width: 200px; */
-
+export const ProductInfo = styled.div`
   display: flex;
-  align-content: flex-end;
-  justify-content: flex-end;
+  flex-direction: column;
+
+  padding-top: 20px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+  h3 {
+    margin-bottom: 10px;
+  }
+`;
+
+export const ProductBuy = styled.div`
+  display: flex;
+  justify-content: center;
 
   align-items: center;
 
@@ -74,5 +85,5 @@ export const ProductBuy = styled.div`
 export const ProductImage = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  align-content: flex-start;
 `;

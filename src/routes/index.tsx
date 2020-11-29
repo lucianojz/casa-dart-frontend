@@ -11,7 +11,7 @@ import Customer from '../pages/Customer';
 const Routes: React.FC = () => (
   <Switch>
     <Route path="/" exact component={Home} />
-    <Route path="/produto/" exact component={Product} />
+    <Route path="/produto/:id+" exact component={Product} />
     <Route path="/cesta" exact component={Basket} />
     <Route path="/login" exact component={Login} />
     <Route path="/pedido" exact component={Order} />
