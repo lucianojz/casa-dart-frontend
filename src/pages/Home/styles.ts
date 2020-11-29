@@ -46,6 +46,11 @@ export const Product = styled.div`
   align-content: center;
   justify-content: space-around;
 
+  img {
+    width: 80px;
+    height: auto;
+  }
+
   a {
     width: 130px;
     height: 34px;
