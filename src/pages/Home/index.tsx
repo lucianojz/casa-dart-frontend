@@ -5,8 +5,8 @@ import api from '../../services/api';
 
 import Layout from '../../components/Layout';
 
-import TigelaImg from '../../assets/tigela01.png';
-import CanecaImg from '../../assets/caneca01.png';
+// import TigelaImg from '../../assets/tigela01.png';
+// import CanecaImg from '../../assets/caneca01.png';
 import BannerImg from '../../assets/banner.png';
 
 import { Container, Banner, ListProducts, Product } from './styles';
@@ -37,7 +37,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     handleLoadProducts();
-  }, []);
+  }, [handleLoadProducts]);
 
   return (
     <Layout>
