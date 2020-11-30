@@ -1,9 +1,12 @@
 import React from 'react';
 
 import { ToastProvider } from './toast';
+import { AuthCustomerProvider } from './authCustomer';
 
 const AppProvider: React.FC = ({ children }) => (
-  <ToastProvider>{children}</ToastProvider>
+  <AuthCustomerProvider>
+    <ToastProvider>{children}</ToastProvider>
+  </AuthCustomerProvider>
 );
 
 export default AppProvider;
