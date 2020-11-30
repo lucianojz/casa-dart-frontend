@@ -37,4 +37,8 @@ export const MenuItem = styled.div`
   svg {
     margin-right: 5px;
   }
+
+  div {
+    width: 120px;
+  }
 `;
