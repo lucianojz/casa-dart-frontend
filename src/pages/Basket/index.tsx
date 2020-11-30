@@ -44,7 +44,7 @@ const Basket: React.FC = () => {
 
       setTotal(calcTotal);
     }
-  }, []);
+  }, [productsBasket]);
 
   useEffect(() => {
     handleLoadBasket();

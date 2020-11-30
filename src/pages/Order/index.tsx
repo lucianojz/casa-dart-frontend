@@ -57,7 +57,7 @@ const Order: React.FC = () => {
 
   useEffect(() => {
     handleLoadBasket();
-  }, []);
+  }, [handleLoadBasket]);
 
   const handleCreateOrder = useCallback(async () => {
     try {
