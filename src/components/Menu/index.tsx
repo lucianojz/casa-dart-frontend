@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback } from 'react';
 
 import { Link, useHistory } from 'react-router-dom';
 
@@ -23,7 +23,7 @@ const Menu: React.FC = () => {
   const handleLogout = useCallback(() => {
     signOut();
     history.push('/');
-  }, []);
+  }, [history, signOut]);
 
   return (
     <>

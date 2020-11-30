@@ -19,7 +19,7 @@ const Customer: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
   const handleAddCustomer = useCallback(() => {
-    console.log('okey');
+    return true;
   }, []);
 
   return (
