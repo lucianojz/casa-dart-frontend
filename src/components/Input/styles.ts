@@ -9,9 +9,10 @@ interface ContainerProps {
 }
 
 export const Container = styled.div`
-  label {
-    padding-left: 10px;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const InputBody = styled.div<ContainerProps>`
@@ -27,6 +28,7 @@ export const InputBody = styled.div<ContainerProps>`
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   input {
     background: #f0f0f0;

@@ -5,11 +5,16 @@ export const Container = styled.div`
 `;
 
 export const Banner = styled.div`
-  width: 900px;
+  width: 100%;
   max-height: 230px;
 
+  /* padding: 10px; */
+  display: flex;
+  justify-content: center;
+  /* border-radius: 5px; */
+
   img {
-    width: 900px;
+    width: 880px;
     height: auto;
   }
 `;
@@ -17,7 +22,7 @@ export const Banner = styled.div`
 export const ListProducts = styled.div`
   width: 900px;
   min-height: 200px;
-  background: #f4f4f4;
+  /* background: #f4f4f4; */
   margin-top: 10px;
   padding-top: 10px;
 

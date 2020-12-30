@@ -1,0 +1,5 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "oneDarkPro.bold": true,
+  "oneDarkPro.editorTheme": "oneDarkPro"
+}

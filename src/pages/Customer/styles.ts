@@ -47,10 +47,12 @@ export const FormFields = styled.div`
 `;
 
 export const FormFooter = styled.div`
+  margin-top: 10px;
+
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   .Button {
-    margin-left: 10px;
+    margin-bottom: 10px;
   }
 `;

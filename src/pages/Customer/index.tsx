@@ -18,7 +18,8 @@ import {
 const Customer: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const handleAddCustomer = useCallback(() => {
+  const handleAddCustomer = useCallback((data, { reset }) => {
+    console.log(data);
     return true;
   }, []);
 
@@ -29,48 +30,44 @@ const Customer: React.FC = () => {
           <CustomerDetail>
             <Form ref={formRef} onSubmit={handleAddCustomer}>
               <FormFields>
+                <strong>Nome Completo</strong>
+                <Input className="InputName" name="full_name" type="text" />
+
+                <strong>Email</strong>
+                <Input className="InputEmail" name="email" type="text" />
+
+                <strong>Senha</strong>
+                <Input name="password" type="password" />
+
+                <strong>CPF</strong>
+                <Input name="document" type="text" />
+
+                <strong>Data de Nascimento</strong>
+                <Input name="birth_date" type="date" />
+
+                <strong>Telefone</strong>
+                <Input name="phone" type="text" />
+
+                <strong>Endereço</strong>
+                <Input name="address" type="text" />
+
+                <strong>Complemento</strong>
+                <Input name="address_complement" type="text" />
+
+                <strong>CEP</strong>
                 <Input
-                  className="InputName"
-                  name="full_name"
+                  name="postal_code"
                   type="text"
-                  label="Nome Completo"
+                  required
+                  pattern="\d{5}-\d{3}"
                 />
-
-                <Input
-                  className="InputEmail"
-                  name="email"
-                  type="text"
-                  label="Email"
-                />
-
-                <Input name="password" type="password" label="Senha" />
-
-                <Input name="document" type="text" label="CPF" />
-
-                <Input name="phone" type="text" label="Telefone" />
-
-                <Input
-                  className="InputAddress"
-                  name="address"
-                  type="text"
-                  label="Endereço"
-                />
-
-                <Input
-                  className="InputAddress"
-                  name="address_complement"
-                  type="text"
-                  label="Complemento"
-                />
-
-                <Input name="postal_code" type="text" label="CEP" />
               </FormFields>
               <FormFooter>
+                <Button type="submit" variation="success">
+                  SALVAR CADASTRO
+                </Button>
                 <Button type="button" variation="error">
                   CANCELAR CADASTRO
-                </Button>
-                <Button type="submit" variation="success">
-                  CADASTRAR
                 </Button>
               </FormFooter>
             </Form>

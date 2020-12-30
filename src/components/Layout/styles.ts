@@ -29,7 +29,7 @@ export const Button = styled.button`
   width: 130px;
   height: 34px;
 
-  background: #f4f4f4;
+  /* background: #f4f4f4; */
   color: #000;
   border-radius: 5px;
 
@@ -44,7 +44,7 @@ export const Button = styled.button`
 export const Content = styled.div`
   width: 900px;
   min-height: 200px;
-  background: #f4f4f4;
+  /* background: #f4f4f4; */
 `;
 
 export const Footer = styled.div`

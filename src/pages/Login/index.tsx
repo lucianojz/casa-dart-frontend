@@ -12,7 +12,7 @@ import Layout from '../../components/Layout';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-import { Container, LoginBody } from './styles';
+import { Container, LoginBody, FormFooter } from './styles';
 import getValidationErrors from '../../utils/getValidationErrors';
 
 interface SignInFormData {
@@ -73,13 +73,14 @@ const Login: React.FC = () => {
             <Input className="Input" name="email" type="text" />
             <strong>Senha</strong>
             <Input className="Input" name="password" type="password" />
-
-            <Button className="Button" type="submit" variation="success">
-              EFETUAR LOGIN
-            </Button>
-            <Button className="Button" type="button" variation="error">
-              ESQUECI MINHA SENHA
-            </Button>
+            <FormFooter>
+              <Button className="Button" type="submit" variation="success">
+                EFETUAR LOGIN
+              </Button>
+              <Button className="Button" type="button" variation="error">
+                ESQUECI MINHA SENHA
+              </Button>
+            </FormFooter>
           </Form>
         </LoginBody>
       </Container>

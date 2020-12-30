@@ -6,13 +6,14 @@ export const Container = styled.div`
 
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 export const LoginBody = styled.div`
-  width: 800px;
+  width: 500px;
   min-height: 300px;
 
-  padding: 10px;
+  /* padding: 10px; */
 
   background: #fff;
 
@@ -29,18 +30,26 @@ export const LoginBody = styled.div`
 
     display: flex;
     flex-direction: column;
+    justify-items: center;
     align-items: center;
 
     strong {
-      margin-top: 10px;
-    }
-
-    div {
-      margin-top: 10px;
+      margin-bottom: 5px;
     }
 
     .Input {
-      width: 200px;
+      width: 90%;
     }
+  }
+`;
+
+export const FormFooter = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+
+  div {
+    margin-top: 10px;
   }
 `;
